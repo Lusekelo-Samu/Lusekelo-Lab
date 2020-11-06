@@ -1,0 +1,19 @@
+#include < iostream>
+#include < math.h>
+using namespace std;
+
+main () {
+	float xa, xb, xc, ac, bc;
+	cout << " enter the abscissa of point a: xa\ n";
+	cin >> xa;
+	cout << " enter the abscissa of Point B: xb\ n";
+	cin >> xb;
+	cout << "enter XC abscissa such as XA < xc < XB of point C which must be between A and B please:\n"; / / If C is not between A and B, the result will be false (negative for example)
+		cin > > xc;
+	ac = xc - xa;
+	bc = xb - xc;
+	cout << "AC =" << ac;
+	cout << "BC =" << bc;
+	cout << "\N the product of the lengths AC and BC be AC * BC = " << ac * bc;
+	return 0;
+}
