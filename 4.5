@@ -1,0 +1,27 @@
+#include < iostream>
+# include "math.h"
+using namespace std;
+// Two nonzero numbers are given.
+// Find the sum, difference, product and quotient of their squares
+int main() {
+	int n1 = 0, n2 = 0, Square1, square2;
+	do {
+		cout << " Please enter the first number\n";
+		cin >> n1;
+	} while (n1 == 0); // we ask him the number again as long as he enters a null integer since we will not be able to divide by 0
+		// this platform is not so good at this kind of while instruction, Currently when you enter 0 it does anything
+		// But normally the program is supposed to ask you for another number until you enter a non null
+		do {
+			cout << " Please enter the second number\n";
+			cin >> n2;
+		} while (n2 == 0); // we ask him the number again as long as he enters a null integer since we will not be able to divide by 0
+
+		Square1 = pow(n1, 2);
+		square2 = pow(n2, 2);
+
+		cout << "the sum of their squares is:" << Square1 + square2;
+		cout << " \ nthe difference of their squares is: " << Square1 - square2;
+		cout << "\nThe product of their squares is: " << Square1 * square2;
+		cout <<"\ quotient; of their squares is; : "<< Square1 / square2;
+			return 0;
+}
