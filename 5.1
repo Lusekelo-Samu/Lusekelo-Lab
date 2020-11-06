@@ -1,0 +1,22 @@
+# include < iostream>
+# include "math.h " / / to be able to use sqrt and abs
+using namespace std;
+
+int main() {
+	double x1, y1, x2, y2;
+	cout << " enter x1 \ n";
+	cin >> x1;
+	cout << " enter y1 \ n";
+	cin >> y1;
+	cout << " between x2 \ n";
+	cin >> x2;
+	cout << " enter y2 \ n";
+	cin >> y2;
+	// the distance is the square root of the sum of the squares, the absolute value, the difference between the coordinates haha
+	// distance = Root (/(x2-x1 / */(x2-x1 / + / (y2-y1 / */ (y2-y1|)
+	double difference1 = abs(x2 - x1); // |(X2 - X1 | abs this is the absolute value
+		double difference2 = abs(y2 - y1); // / (Y2 - y1
+			double distance = sqrt(pow(difference1, 2) + pow(difference2, 2)); // pow(a, b) it is an exponent B and sqrt it is the square root
+			cout << " the distance between the points (" << x1 << ", " << x2 << "), (" << y1 << "," << y2 << "is:" << distance;
+	return 0;
+}
