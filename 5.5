@@ -1,0 +1,31 @@
+#include < iostream>
+# include "math.h"
+using namespace std;
+
+main() {
+	int xA, yA, xB, yB, xC, yC;
+	cout << " enter the abscissa of the first vertex xa:\n";
+	cin >> xA;
+	cout << " enter the order of the first vertex ya:\n";
+	cin >> yA;
+	cout << " enter the abscissa of the second Vertex xb:\n";
+	cin >> xB;
+	cout << " enter the order of the second Vertex yb:\n";
+	cin >> yB;
+	cout << " enter the abscissa of the third semmey xb:\n";
+	cin >> xC;
+	cout << " enter the order of the third Vertex YB:\n";
+	cin >> yC;
+
+	double ab = sqrt(pow((abs(xA - xB)), 2) + pow((abs(yA - yB)), 2));
+	double ac = sqrt(pow((abs(xA - xC)), 2) + pow((abs(yA - yC)), 2));
+	double bc = sqrt(pow((abs(xB - xC)), 2) + pow((abs(yB - yC)), 2));
+
+	double halfPerimeter = 0.5 * (ab + ac + bc);
+
+	// Heron formula
+	double area = sqrt(halfPerimeter * (halfPerimeter - ab) * (halfPerimeter - ac) * (halfPerimeter - bc));
+
+	cout << "\N the area of the triangle is = " << area;
+	return 0;
+}
