@@ -1,0 +1,26 @@
+#include < iostream>
+
+using namespace std;
+
+int main()
+{
+	float a, b, c, tempb, tempc;
+
+	cout << "enter the first number a:" << endl;
+	cin >> a;
+	cout << "enter the second number b:" << endl;
+	cin >> b;
+	cout << "enter the second number bçc:" << endl;
+	cin >> c;
+
+	cout << "before inversion, we have: a =" << a << ", b = " << b << ", c = " << c << endl;
+
+	tempb = b; // we keep in tempb, the value of B before replacing it with b
+		b = a; // B is now a
+	tempc = c; // we keep in tempc, the value of c before replacing it with b
+		c = tempb; // C becomes b
+		a = tempc; // A becomes c
+
+		cout << "after inversion, we have: a =" << a << ", b = " << b << ", c = " << c << endl;
+
+}
