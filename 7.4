@@ -1,0 +1,25 @@
+# include < iostream>
+using namespace std;
+
+int main() 
+{
+	float v1, v2, s, t;
+	cout << "enter V1" << endl;
+	cin >> v1;
+	cout << "enter V2" << endl;
+	cin >> v2;
+	cout << "enter S, the distance initially separating them" << endl;
+	cin >> s;
+	cout << "enter t, the number of hours after which the distance between them is searched" << endl;
+	cin >> t;
+
+	float d1, d2, d12;
+	d1 = v1 * t;
+	d2 = v2 * t;
+	cout << "if the cars move away from each other:" << endl;
+	cout << "the distance traveled by the car 1 after" << t << "hours is" << d1 << endl;
+	cout << "the distance traveled by the car 2 after" << t << "hours is" << d2 << endl;
+	d12 = s + d1 + d2;
+	cout << "the distance between the two is" << d12;
+	return 0;
+}
