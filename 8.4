@@ -1,0 +1,26 @@
+#include < iostream>
+# include < string>
+using namespace std;
+
+
+int main()
+{
+
+	int number;
+	cout << "enter the number with the two digits" << endl;
+	cin >> number;
+
+	// whole division ex: 10/3 = 3 and not 3.33
+	//(we just take the integer part as numero is an int)
+
+	int firstdigits = number / 10;
+	int seconddigits = number % 10; // modulo = rest of integer division ex : 34 % 10 = 4;
+
+	cout << "the rearrange number is" << seconddigits *10 + firstdigits;
+	// if the number is 34
+	//34/10 = 3
+	//34 % 10 = 4;
+	// the new number is 43 = 4*10 + 3
+
+	return 0;
+}
