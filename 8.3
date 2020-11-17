@@ -1,0 +1,19 @@
+# include < iostream>
+using namespace std;
+
+int main() 
+{
+	int a, b;
+	do {
+		cout << " a must be greater than a B " << endl;
+		cout << "enter a" << endl;
+		cin >> a;
+		cout << "enter B" << endl;
+		cin >> b;
+	} while (a < b);
+
+	cout << "the remaining length is" << a % b;
+	// we take the rest of the integer division of a by B (modulo - > %)
+
+	return 0;
+}
