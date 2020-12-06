@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	int i, n, t = 1, * a, * b, * c;
+	setlocale(LC_ALL, "Russian");
+	cout << " Enter the array size N\nN=";
+	cin >> n;
+	a = new int[n + 1];
+	b = new int[n + 1];
+	c = new int[n + 1];
+	for (i = 1; i <= n; i++) {
+		cout << "\enter the array element A#" << i << " =";
+		cin >> a[i];
+	}
+	b[1] = 1;
+	c[1] = a[1];
+	for (i = 2; i <= n; i++) {
+		if (a[i - 1] == a[i])
+			++b[t];
+		else {
+			++t;
+			b[t] = 1;
+			c[t] = a[i];
+		}
+	}
+	cout << " Array A:\n";
+	for (i = 1; i <= t; i++)
+	{
+		cout << "A series of " << b[i] << "elements of the number" << c[i] << " \n";
+	}
+}
