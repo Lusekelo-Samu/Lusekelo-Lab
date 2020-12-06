@@ -1,0 +1,61 @@
+#include <iostream>
+using namespace std;
+bool Delete(int* a, int i, int& n);
+int main()
+{
+	int j = 0, schet = 1, k, schet_n, i, n, l, * a, * b;
+	cout << "Enter the array size N and the length of the series array L\nN=";
+	cin >> n;
+	cout << "L=";
+	cin >> l;
+	a = new int[n + 1];
+	b = new int[n + 1];
+	schet_n = n;
+	for (i = 1; i <= n; i++) {
+		cout << "\enter the array element A#" << i << "=";
+		cin >> a[i];
+	}
+	//
+	for (i = 2; i <= n; i++)
+	{
+		if (a[i - 1] != a[i])
+		{
+			if (schet > l)
+			{
+				b[++j] = 0;
+				schet_n -= schet - 1;
+			}
+			else
+				for (k = 1; k <= schet; k++)
+					b[++j] = a[i - 1];
+
+			schet = 0;
+		}
+		++schet;
+	}
+	if (schet > l)
+	{
+		b[++j] = 0;
+		schet_n -= schet - 1;
+	}
+	else
+
+		for (k = 1; k <= schet; k++)
+			b[++j] = a[i - 1];
+
+	for (i = 1; i <= schet_n; i++)
+		a[i] = b[i];
+	//
+	cout << "Array A:\n";
+	for (i = 1; i <= schet_n; i++)
+	{
+		cout << a[i] << " ";
+	}
+
+}
+    bool Delete(int* a, int i, int& n) {
+	for (i; i < n; i++)
+		a[i] = a[i + 1];
+	n--;
+	return true;
+}
