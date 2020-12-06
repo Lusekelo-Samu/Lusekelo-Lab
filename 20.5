@@ -1,0 +1,44 @@
+#include <iostream>
+#include <ctime>
+using namespace std;
+int main()
+{
+	srand(time(0));
+	int i, j, n, m, schet, num = 0;
+	int** a;
+	float sr_ar;
+	cout << "Enter the matrix size MxN\nM=";
+	cin >> m;
+	cout << "N=";
+	cin >> n;
+	a = new int* [m + 1];
+	for (i = 1; i <= m; i++)
+		a[i] = new int[n + 1];
+	for (i = 1; i <= m; i++) {
+		for (j = 1; j <= n; j++)
+		{
+			a[i][j] = rand() % 9 + 1;
+			cout << a[i][j] << " ";
+		}
+		cout << "\n";
+	}
+	for (j = 1; j <= n; j++)
+		if (num == 0)
+		{
+			schet = 0;
+			for (i = 1; i <= m; i++)
+			{
+				if (a[i][j] % 2 == 1) {
+					schet++;
+				}
+				if (schet == m)
+				{
+					num = i;
+					cout << "\nNumber of a column with odd elements =" << num << "\n";
+
+				}
+			}
+		}
+	if (num == 0)
+		cout << "\n" << 0;
+}
