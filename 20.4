@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	int i, n;
+	float** a;
+	cout << "Enter the number of points N\nN=";
+	cin >> n;
+	a = new float* [n + 1];
+	for (i = 0; i <= n; i++)
+		a[i] = new float[1];
+	for (i = 1; i <= n; i++) {
+		cout << "\nenter x#" << i << "=";
+		cin >> a[i][0];
+		cout << "\nenter y#" << i << "=";
+		cin >> a[i][1];
+	}
+	a[0][0] = a[1][0];
+	a[0][1] = a[1][1];
+	for (i = 2; i <= n; i++) {
+
+		if (sqrt(pow(a[i][0], 2) + pow(a[i][1], 2)) > sqrt(pow(a[0][0], 2) + pow(a[0][1],
+			2)))
+		{
+			a[0][0] = a[i][0];
+			a[0][1] = a[i][1];
+		}
+
+	}
+	cout << "The point farthest from the origin:\nX:" << a[0][0] << " Y:" << a[0][1];
+}
